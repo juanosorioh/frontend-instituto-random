@@ -1,7 +1,6 @@
 export const LOAD_POSTS = 'LOAD_POSTS'
 export const LOGIN = 'LOGIN'
 export const LOGOUT = 'LOGOUT'
-export const STATE = 'STATE'
 export const VIEW_SUBJECT_MATTER = 'VIEW_SUBJECT_MATTER'
 export const VIEW_CAREER = 'VIEW_CAREER'
 export const VIEW_STUDENTS = 'VIEW_STUDENTS'

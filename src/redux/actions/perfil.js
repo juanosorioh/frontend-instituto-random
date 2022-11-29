@@ -1,5 +1,5 @@
 import axios from "axios"
-import { LOGIN, LOGOUT, STATE } from "./types"
+import { LOGIN, LOGOUT } from "./types"
 
 export const login = (email, password)=>{
     return async (dispatch) =>{
@@ -29,15 +29,7 @@ export const verify = (token)=>{
         }
     }
 }
-export const states = (token)=>{
-    return async (dispatch) => {
-        try {
-            dispatch({type: STATE, payload: {token: token}})
-        } catch (error) {
-            console.log(error)
-        }
-    }
-}
+
 
 export const logout = () =>{
     return async (dispatch) =>{
@@ -48,14 +40,3 @@ export const logout = () =>{
         }
     }
 }
-
-/* export const state =() =>{
-    return async(dispatch) =>{
-        try {
-            const response = await axios.get('/back/auth/verify', {headers: {token}})
-            dispatch({type: STATE, payload: {token: response.data.token}})
-        } catch (error) {
-            console.log(error)
-        }
-    }
-} */
