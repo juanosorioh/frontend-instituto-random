@@ -4,17 +4,17 @@ import AdministrarCarreras from "./pages/AdministrarCarreras";
 import AdministrarMaterias from "./pages/AdministrarMaterias";
 import AdministrarPersonas from "./pages/AdministrarPersonas";
 import AlumnosListados from "./pages/alumnosListados";
-import AnunciosForm from "./pages/anunciosForm";
+import AnunciosForm from "./pages/AgregarAnuncios";
 import AnunciosListados from "./pages/anunciosListados";
-import CarrerasForm from "./pages/carrerasForm";
+import CarrerasForm from "./pages/AgregarCarreras";
 import CarrerasListados from "./pages/carrerasListados";
 import Dashboard from "./pages/Dashboard";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
-import MateriasForm from "./pages/materiasForm";
-import MateriasListadas from "./pages/materiasListadas";
+import MateriasForm from "./pages/AgregarMaterias";
+import MateriasListadas from "./pages/MateriasListados";
 import NoExiste from "./pages/NoExiste";
-import Table from "./pages/Table";
+import Table from "./pages/TableStudents";
 
 const Routing = () => {
   return (
@@ -25,9 +25,9 @@ const Routing = () => {
         <Route path="/verAlumnos" element={<AlumnosListados />} />
         <Route path="/verCarreras" element={<CarrerasListados />} />
         <Route path="/verMaterias" element={<MateriasListadas />} />
-        <Route path="/formCarreras" element={<CarrerasForm />} />
-        <Route path="/formMaterias" element={<MateriasForm />} />
-        <Route path="/formAnuncios" element={<AnunciosForm />} />
+        <Route path="/AgregarCarreras" element={<CarrerasForm />} />
+        <Route path="/AgregarMaterias" element={<MateriasForm />} />
+        <Route path="/AgregarAnuncios" element={<AnunciosForm />} />
         <Route path="/adminCarrera" element={<AdministrarCarreras />} />
         <Route path="/adminMateria" element={<AdministrarMaterias />} />
         <Route path="/adminPersona" element={<AdministrarPersonas />} />
