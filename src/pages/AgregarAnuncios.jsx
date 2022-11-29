@@ -1,16 +1,17 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const AdministrarCarreras = () => {
+const AnunciosForm = () => {
   const navigate = useNavigate();
+  
   return (
     <>
       <div className="container">
-      <h1 style={{textAlign: "center"}}>Administrar Carreras</h1>
+      <h1 style={{textAlign: "center"}}>Agregar Anuncio</h1>
         <form>
           <div className="form-row col-auto">
             <div className="form-group col-md-auto">
-              <label>Nombre</label>
+              <label>Autor</label>
               <input
                 type="text"
                 className="form-control"
@@ -19,7 +20,7 @@ const AdministrarCarreras = () => {
               />
             </div>
             <div className="form-group col-md-auto">
-              <label>Apellido</label>
+              <label>fecha</label>
               <input
                 type="text"
                 className="form-control"
@@ -28,16 +29,7 @@ const AdministrarCarreras = () => {
               />
             </div>
             <div className="form-group col-md-auto">
-              <label>año</label>
-              <input
-                type="text"
-                className="form-control"
-                //id=""
-                placeholder=""
-              />
-            </div>
-            <div className="form-group col-md-auto">
-              <label>materias</label>
+              <label>anuncio</label>
               <input
                 type="text"
                 className="form-control"
@@ -66,4 +58,4 @@ const AdministrarCarreras = () => {
   );
 };
 
-export default AdministrarCarreras;
+export default AnunciosForm;

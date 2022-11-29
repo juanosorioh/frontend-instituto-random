@@ -1,12 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const AdministrarPersonas = () => {
+  const navigate = useNavigate();
   return (
     <>
-      <div className="">
+      <div className="container">
+       <h1 style={{textAlign: "center"}}>AdministrarPersonas</h1>
         <form>
           <div className="form-row col-auto">
-            <div className="form-group col-md-6">
+            <div className="form-group col-md-auto">
               <label>Nombre</label>
               <input
                 type="text"
@@ -15,7 +18,7 @@ const AdministrarPersonas = () => {
                 placeholder=""
               />
             </div>
-            <div className="form-group col-md-6">
+            <div className="form-group col-md-auto">
               <label>Apellido</label>
               <input
                 type="text"
@@ -24,7 +27,7 @@ const AdministrarPersonas = () => {
                 placeholder=""
               />
             </div>
-            <div className="form-group col-md-6">
+            <div className="form-group col-md-auto">
               <label>Email</label>
               <input
                 type="email"
@@ -33,7 +36,7 @@ const AdministrarPersonas = () => {
                 placeholder="Email"
               />
             </div>
-            <div className="form-group col-md-6">
+            <div className="form-group col-md-auto">
               <label>Password</label>
               <input
                 type="password"
@@ -42,7 +45,7 @@ const AdministrarPersonas = () => {
                 placeholder="Password"
               />
             </div>
-            <div className="form-group col-md-6">
+            <div className="form-group col-md-auto">
               <label>birthdate</label>
               <input
                 type="date"
@@ -51,7 +54,7 @@ const AdministrarPersonas = () => {
                 placeholder=""
               />
             </div>
-            <div className="form-group col-md-6">
+            <div className="form-group col-md-auto">
               <label>DNI</label>
               <input
                 type="number"
@@ -60,7 +63,7 @@ const AdministrarPersonas = () => {
                 placeholder=""
               />
             </div>
-            <div className="form-group col-md-6">
+            <div className="form-group col-md-auto">
               <label>Telefono</label>
               <input
                 type="text"
@@ -69,7 +72,7 @@ const AdministrarPersonas = () => {
                 placeholder=""
               />
             </div>
-            <div className="form-group col-md-6">
+            <div className="form-group col-md-auto">
               <label>Rol</label>
               <select id="inputState" className="form-control">
                 <option value={3}>Alumno</option>
@@ -77,7 +80,7 @@ const AdministrarPersonas = () => {
                 <option value={2}>Administrativo</option>
               </select>
             </div>
-            <div className="form-group col-md-6">
+            <div className="form-group col-md-auto">
               <label>Carrera</label>
               <input
                 type="text"
@@ -86,7 +89,7 @@ const AdministrarPersonas = () => {
                 placeholder=""
               />
             </div>
-            <div className="form-group col-md-6">
+            <div className="form-group col-md-auto">
               <label>Titulo</label>
               <input
                 type="text"
@@ -95,7 +98,7 @@ const AdministrarPersonas = () => {
                 placeholder=""
               />
             </div>
-            <div className="form-group col-md-6">
+            <div className="form-group col-md-auto">
               <label>Datos</label>
               <input
                 type="text"
@@ -105,9 +108,20 @@ const AdministrarPersonas = () => {
               />
             </div>
           </div>
-          <button type="submit" className="btn btn-primary">
-            enviar
-          </button>
+          <div style={{ textAlign: "center" }}>
+            <button type="button" className="btn btn-primary btn-lg">
+              enviar
+            </button>
+            <button
+              type="button"
+              className="btn btn-secondary btn-lg "
+              onClick={() => {
+                navigate("/dashboard");
+              }}
+            >
+              volver
+            </button>
+          </div>
         </form>
       </div>
     </>

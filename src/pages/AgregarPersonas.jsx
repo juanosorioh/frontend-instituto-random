@@ -1,12 +1,12 @@
 import React from "react";
 import { useNavigate } from 'react-router-dom'
 
-const AdministrarMaterias = () => {
+const PersonaForm = () => {
   const navigate = useNavigate()
   return (
     <>
       <div className="container">
-        <h1 style={{textAlign: "center"}}>Administrar Materias</h1>
+      <h1 style={{textAlign: "center"}}>Agregar Persona</h1>
         <form>
           <div className="form-row col-auto">
             <div className="form-group col-md-auto">
@@ -19,7 +19,7 @@ const AdministrarMaterias = () => {
               />
             </div>
             <div className="form-group col-md-auto">
-              <label>Descripcion</label>
+              <label>Apellido</label>
               <input
                 type="text"
                 className="form-control"
@@ -28,12 +28,12 @@ const AdministrarMaterias = () => {
               />
             </div>
             <div className="form-group col-md-auto">
-              <label>profesores</label>
+              <label>Email</label>
               <input
-                type="text"
+                type="email"
                 className="form-control"
-                //id=""
-                placeholder=""
+                id="inputEmail4"
+                placeholder="Email"
               />
             </div>
             <div className="form-group col-md-auto">
@@ -128,4 +128,4 @@ const AdministrarMaterias = () => {
   );
 };
 
-export default AdministrarMaterias;
+export default PersonaForm;

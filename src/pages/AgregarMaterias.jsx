@@ -1,12 +1,12 @@
 import React from "react";
 import { useNavigate } from 'react-router-dom'
 
-const AdministrarMaterias = () => {
+const MateriasForm = () => {
   const navigate = useNavigate()
   return (
     <>
       <div className="container">
-        <h1 style={{textAlign: "center"}}>Administrar Materias</h1>
+      <h1 style={{textAlign: "center"}}>Agregar Materia</h1>
         <form>
           <div className="form-row col-auto">
             <div className="form-group col-md-auto">
@@ -128,4 +128,4 @@ const AdministrarMaterias = () => {
   );
 };
 
-export default AdministrarMaterias;
+export default MateriasForm;

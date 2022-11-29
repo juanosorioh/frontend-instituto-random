@@ -1,53 +1,77 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from 'react-router-dom'
+import { connect } from "react-redux";
+import { addCareers } from "../redux/actions/carreras";
 
-const AdministrarCarreras = () => {
-  const navigate = useNavigate();
+const initialState = {
+  nombre:"", descripcion:"", anio:"", materias:""
+}
+
+const CarrerasForm = ({ addCareers}) => {
+  const navigate = useNavigate()
+const [carrera, setCarrera] = useState(initialState);
+  const handleChange = (e)=>{
+    setCarrera((prev)=>{return {...prev, [e.target.name]: e.target.value}})
+  }
+  const handleSubmit =(e)=>{
+    e.preventDefault()
+    console.log(carrera)
+    addCareers(carrera.nombre, carrera.descripcion, carrera.anio, carrera.materias)
+    navigate('/dashboard')
+  }
   return (
     <>
       <div className="container">
-      <h1 style={{textAlign: "center"}}>Administrar Carreras</h1>
-        <form>
+      <h1 style={{textAlign: "center"}}>Agregar Carrera</h1>
+        <form onSubmit={handleSubmit}>
           <div className="form-row col-auto">
             <div className="form-group col-md-auto">
               <label>Nombre</label>
               <input
+                name="nombre"
                 type="text"
                 className="form-control"
                 //id=""
                 placeholder=""
+                onChange={handleChange}
               />
             </div>
             <div className="form-group col-md-auto">
-              <label>Apellido</label>
+              <label>Descripcion</label>
               <input
+                name="descripcion"
                 type="text"
                 className="form-control"
                 //id=""
                 placeholder=""
+                onChange={handleChange}
               />
             </div>
             <div className="form-group col-md-auto">
-              <label>año</label>
+              <label>Año</label>
               <input
+                name="anio"
                 type="text"
                 className="form-control"
                 //id=""
                 placeholder=""
+                onChange={handleChange}
               />
             </div>
             <div className="form-group col-md-auto">
-              <label>materias</label>
+              <label>Materias</label>
               <input
+                name="materias"
                 type="text"
                 className="form-control"
                 //id=""
                 placeholder=""
+                onChange={handleChange}
               />
             </div>
           </div>
           <div style={{ textAlign: "center" }}>
-            <button type="button" className="btn btn-primary btn-lg">
+            <button type="submit" className="btn btn-primary btn-lg">
               enviar
             </button>
             <button
@@ -66,4 +90,4 @@ const AdministrarCarreras = () => {
   );
 };
 
-export default AdministrarCarreras;
+export default connect( {addCareers})(CarrerasForm);

@@ -1,17 +1,18 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
+import Album from '../components/Album';
 import { loadCareers } from '../redux/actions/carreras'
 
-const CarrerasListados = ({materias, loadCareers}) => {
+const CarrerasListados = ({carreras, loadCareers}) => {
   useEffect(() => {
     loadCareers()
   }, []);
   return (
     <div>
-      {materias ? (materias.map((element, index) => 
-      <div key={index}>
-        <p>{element.nombre}</p>
-      </div>)):(<h1>No existen carreras agregadas</h1>)}
+      {carreras ?
+                (carreras.map((element, index) => (
+                  <div key={index}><Album descripcion={element.descripcion} nombre={element.nombre}/></div>
+                ))) : (<h1>no existen carreras</h1>)  }
     </div>
   )
 }
