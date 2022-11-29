@@ -4,13 +4,13 @@ import { loadPosts } from '../redux/actions/anuncios';
 
 
 const AnunciosListados = ({anuncios, loadPosts}) => {
-const [anuncio, setAnuncio] = useState('');
+/* const [anuncio, setAnuncio] = useState('');
   const handleChange = (e)=>{
     setAnuncio(e.target.value)
   }
   const handleSubmit =(e)=>{
     e.preventDefault()
-  }
+  } */
 
   useEffect(() => {
     loadPosts()
@@ -19,10 +19,10 @@ const [anuncio, setAnuncio] = useState('');
   return (
     <>
       <h1>lista anuncios</h1>
-      <form onSubmit={handleSubmit}>
+{/*       <form onSubmit={handleSubmit}>
         <input type="text" name='anuncio' onChange={handleChange}/>
         <button type="submit">crear</button>
-      </form>
+      </form> */}
       <div>
         {
           anuncios ? 
