@@ -7,7 +7,7 @@ const NavLog = ({token, logout}) => {
   const navigate = useNavigate()
   const salir = ()=>{
     logout()
-    navigate('/login')
+    navigate('/')
     //location. reload()
   }
   const panel = () =>{

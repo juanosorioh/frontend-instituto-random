@@ -2,11 +2,14 @@ import React, { useState, useEffect } from 'react'
 import NavLog from './NavLog';
 import NavNoLogget from './NavNoLogget'
 import { connect } from 'react-redux';
+import Home from '../../pages/Home';
 
 const IsLogget = ({token}) => {
   return (
     <div>
-        {token ? (<NavLog/>) : (<NavNoLogget/>)}
+        {token ? (<NavLog/>) : (
+          null
+)}
     </div>
   )
 }
