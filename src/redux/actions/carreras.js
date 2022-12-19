@@ -1,5 +1,5 @@
 import axios from "axios";
-import { VIEW_CAREER, ADD_CAREER } from "./types";
+import { VIEW_CAREER } from "./types";
 
 export const loadCareers = () =>{
     return async (dispatch) =>{

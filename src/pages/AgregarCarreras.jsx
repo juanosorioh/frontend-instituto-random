@@ -22,7 +22,7 @@ const [carrera, setCarrera] = useState(initialState);
   return (
     <>
       <div className="container">
-      <h1 style={{textAlign: "center"}}>Agregar Carrera</h1>
+      <h1 style={{textAlign: "center"}}>AgregarCarrera</h1>
         <form onSubmit={handleSubmit}>
           <div className="form-row col-auto">
             <div className="form-group col-md-auto">
@@ -90,4 +90,5 @@ const [carrera, setCarrera] = useState(initialState);
   );
 };
 
-export default connect( {addCareers})(CarrerasForm);
+
+export default connect(null, {addCareers})(CarrerasForm);

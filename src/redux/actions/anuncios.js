@@ -12,3 +12,20 @@ export const loadPosts = () => {
         }
     } 
 }
+
+export const addPost = (autor, fecha, anuncio)=>{
+    return async () =>{
+        const body = JSON.stringify({autor, fecha, anuncio})
+        const config = {
+            headers:{
+                "Content-Type": "application/json"
+            }
+        }
+        try {
+            const response = await axios.post('/back/administrativos/agregarAnuncio',body, config)
+            console.log(response.data)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+}

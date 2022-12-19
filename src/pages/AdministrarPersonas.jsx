@@ -6,7 +6,7 @@ const AdministrarPersonas = () => {
   return (
     <>
       <div className="container">
-       <h1 style={{textAlign: "center"}}>AdministrarPersonas</h1>
+       <h1 style={{textAlign: "center"}}>Administrar Personas</h1>
         <form>
           <div className="form-row col-auto">
             <div className="form-group col-md-auto">
